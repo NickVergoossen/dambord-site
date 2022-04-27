@@ -2,7 +2,11 @@
     <style> </style>
     <head>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <meta charset="utf-8">
         <meta name="vieuwport" content="width=device-width, initial-scale=1">
         <title>website dambord Nick Vergoossen</title>
@@ -53,7 +57,92 @@
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  <pre class="pre-scrollable">
+                      <code>
+                        #include <FastLED.h>
+                            #define LED_PIN 2
+                            #define NUM_LEDS 128
+                            #define BRIGHTNESS 20
+                            
+                            CRGB leds[NUM_LEDS];
+                            
+                            void setup() {
+                              // put your setup code here, to run once:
+                              FastLED.addLeds<WS2812, LED_PIN, GRB>(leds, NUM_LEDS);
+                              FastLED.setBrightness(BRIGHTNESS);
+                            }
+                            
+                            void loop() {
+                              // put your main code here, to run repeatedly:
+                              leds[1] = CRGB::White;
+                              leds[1,3] = CRGB::Orange;
+                              leds[3,5] = CRGB::White;
+                              leds[5,7] = CRGB::Orange;
+                              leds[7,9] = CRGB::White;
+                              leds[9,11] = CRGB::Orange;
+                              leds[11,13] = CRGB::White;
+                              leds[13,15] = CRGB::Orange;
+                              leds[15,17] = CRGB::White;
+                              leds[17,19] = CRGB::Orange;
+                              leds[19,21] = CRGB::White;
+                              leds[21,23] = CRGB::Orange;
+                              leds[23,25] = CRGB::White;
+                              leds[25,27] = CRGB::Orange;
+                              leds[27,29] = CRGB::White;
+                              leds[29,31] = CRGB::Orange;
+                              leds[31,33] = CRGB::White;
+                              leds[33,35] = CRGB::Orange;
+                              leds[35,37] = CRGB::White;
+                              leds[37,39] = CRGB::Orange;
+                              leds[39,41] = CRGB::White;
+                              leds[41,43] = CRGB::Orange;
+                              leds[43,45] = CRGB::White;
+                              leds[45,47] = CRGB::Orange;
+                              leds[47,49] = CRGB::White;
+                              leds[49,51] = CRGB::White;
+                              leds[51,53] = CRGB::White;
+                              leds[53,55] = CRGB::White;
+                              leds[55,57] = CRGB::White;
+                              leds[57,59] = CRGB::White;
+                              leds[59,61] = CRGB::White;
+                              leds[61,63] = CRGB::White;
+                              leds[63,65] = CRGB::White;
+                              leds[65,67] = CRGB::White;
+                              leds[67,69] = CRGB::White;
+                              leds[69,71] = CRGB::White;
+                              leds[71,73] = CRGB::White;
+                              leds[73,75] = CRGB::White;
+                              leds[75,77] = CRGB::White;
+                              leds[77,79] = CRGB::White;
+                              leds[79,81] = CRGB::Green;
+                              leds[81,83] = CRGB::White;
+                              leds[83,85] = CRGB::Green;
+                              leds[85,87] = CRGB::White;
+                              leds[87,89] = CRGB::Green;
+                              leds[89,91] = CRGB::White;
+                              leds[91,93] = CRGB::Green;
+                              leds[93,95] = CRGB::White;
+                              leds[95,97] = CRGB::Green;
+                              leds[97,99] = CRGB::White;
+                              leds[99,101] = CRGB::Green;
+                              leds[101,103] = CRGB::White;
+                              leds[103,105] = CRGB::Green;
+                              leds[105,107] = CRGB::White;
+                              leds[107,109] = CRGB::Green;
+                              leds[109,111] = CRGB::White;
+                              leds[111,113] = CRGB::Green;
+                              leds[113,115] = CRGB::White;
+                              leds[115,117] = CRGB::Green;
+                              leds[117,119] = CRGB::White;
+                              leds[119,121] = CRGB::Green;
+                              leds[121,123] = CRGB::White;
+                              leds[123,125] = CRGB::Green;
+                              leds[125,127] = CRGB::White;
+                              delay(100);
+                              FastLED.show();
+                            }
+                      </code>
+                  </pre>
                 </div>
               </div>
             </div>
